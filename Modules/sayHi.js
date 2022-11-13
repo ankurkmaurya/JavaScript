@@ -1,4 +1,4 @@
-//sayHi.js
+//Named Export sayHi.js
 export function sayHi(user) {
   console.log(`Hello, ${user}!`);
   }
