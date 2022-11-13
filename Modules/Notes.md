@@ -83,5 +83,11 @@ The notable difference of export ... from compared to import/export is that re-e
    export {default as User} from './user.js'; // re-export default
 
 
+## Dynamic imports
+ ### The import() expression
+The import(module) expression loads the module and returns a promise that resolves into a module object that contains all its exports. It can be called from any place in the code.
+
+
+
 
 
