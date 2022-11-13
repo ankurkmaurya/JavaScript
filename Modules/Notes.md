@@ -1,7 +1,8 @@
 Ref Link : https://javascript.info/modules-intro
 
-Note : package.json - file is required to run the java modules in Node
-       Run main.js file as >>>> node main.js
+<b>Note :</b> 
+package.json - file is required to run the java modules in Node.<br>
+Run main.js file as >>>> node main.js
 
 
 # Modules
