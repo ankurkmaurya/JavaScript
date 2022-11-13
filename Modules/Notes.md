@@ -4,7 +4,7 @@ Note : package.json - file is required to run the java modules in Node
        Run main.js file as >>>> node main.js
 
 
---------------------------------- MODULE ---------------------------------
+# Modules
 A module may contain a class or a library of functions for a specific purpose.
 
 For a long time, JavaScript existed without a language-level module syntax. 
@@ -16,7 +16,7 @@ The language-level module system appeared in the standard in 2015, gradually evo
 and is now supported by all major browsers and in Node.js.
 
 
-# What is a module?
+## What is a module?
 A module is just a file. One script is one module. As simple as that.
 
 Modules can load each other and use special directives export and import to interchange functionality, 
@@ -86,10 +86,21 @@ The notable difference of export ... from compared to import/export is that re-e
 
 
 ## Dynamic imports
- ### The import() expression
+### The import() expression
 The import(module) expression loads the module and returns a promise that resolves into a module object that contains all its exports. It can be called from any place in the code.
 
+```shell
+   let modulePath = prompt("Which module to load?");
 
+   import(modulePath)
+   .then(obj => <module object>)
+   .catch(err => <loading error, e.g. if no such module>)
+```
+
+<ul>
+<li>Dynamic imports work in regular scripts, they don’t require 'script type="module"'.</li>
+<li>Although import() looks like a function call, it’s a special syntax that just happens to use parentheses (similar to super()).
+So we can’t copy import to a variable or use call/apply with it. It’s not a function.</li>
 
 
 
