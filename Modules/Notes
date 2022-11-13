@@ -45,6 +45,11 @@ There are core features, valid both for browser and server-side JavaScript.
    In other words, with modules we use import/export instead of relying on global variables.
    In the browser, we can make a variable window-level global by explicitly assigning it to a window property, e.g. window.user = "John".
 
+That’s exactly because the module is executed only once. Exports are generated, and then they are shared between importers, so if something changes the admin object, other importers will see that.
+
+3. In a module, “this” is undefined
+   In a module, top-level this is undefined.
+   
 
 
 
