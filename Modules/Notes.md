@@ -77,10 +77,12 @@ That’s exactly because the module is executed only once. Exports are generated
 ## Re-export
 “Re-export” syntax 'export ... from ...' allows to import things and immediately 
 export them (possibly under another name)
-The notable difference of export ... from compared to import/export is that re-exported modules aren’t available in the current file. 
-
+The notable difference of export ... from compared to import/export is that re-exported modules aren’t available in the current file.
+       
+```shell
    export {sayHi} from './say.js'; // re-export sayHi
    export {default as User} from './user.js'; // re-export default
+```
 
 
 
